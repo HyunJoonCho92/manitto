@@ -4,6 +4,8 @@ import com.example.manitto.common.LoginSessionManager;
 import com.example.manitto.dtos.User;
 import com.example.manitto.services.UserService;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,9 +31,15 @@ public class UserApiController {
 
     @PostMapping("/login")
     public void login(User.AuthDto authDto) {
+    	System.out.println("로그인");
         service.login(authDto);
     }
 
+    @GetMapping("/logout")
+    public void logout() {
+    	System.out.println("로그아웃");
+    }
+    
     @PutMapping("/role")
     public String getUserRole() {
         User.InfoDto info = loginSessionManager.getLoginUserInfo();

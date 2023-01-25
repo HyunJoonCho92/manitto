@@ -7,13 +7,14 @@
     <title>Manitto | Welcome</title>
 </head>
 <body>
-<h2>시작페이지</h2>
-<c:if test="${ sessionScope.info == null }">
-    <a href="/user/login">로그인</a><br>
-    <a href="/user/register">회원가입</a>
-</c:if>
-<c:if test="${ sessionScope.info != null }">
-    <a href="/user/main">메인페이지</a><br>
-</c:if>
+	<jsp:include page="frame/header.jsp" /><br>
+	<h2>시작페이지</h2>
+	<c:if test="${ sessionScope.info == null }">
+	    <a href="/user/login">로그인</a><br>
+	    <a href="/user/register">회원가입</a>
+	</c:if>
+	<c:if test="${ sessionScope.info != null }">
+	    <a href="/user/main">메인페이지</a><br>
+	</c:if>
 </body>
 </html>

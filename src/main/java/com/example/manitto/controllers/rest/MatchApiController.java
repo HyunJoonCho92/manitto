@@ -1,7 +1,10 @@
 package com.example.manitto.controllers.rest;
 
+import com.example.manitto.dtos.Match;
 import com.example.manitto.services.MatchService;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,6 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MatchApiController {
     private final MatchService matchService;
-
-
+    
+    @GetMapping("/pmrlookup")
+    public void pmrlookup() {
+    	Match mat;
+    	
+    }
 }

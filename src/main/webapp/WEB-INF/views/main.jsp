@@ -6,6 +6,8 @@
     <title>Manitto | Main</title>
 </head>
 <body>
-main page
+	<jsp:include page="frame/header.jsp" /><br>
+	<jsp:include page="/WEB-INF/views/frame/header.jsp"></jsp:include>
+	main page
 </body>
 </html>
