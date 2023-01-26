@@ -23,6 +23,8 @@ public class UserApiController {
     public void registerUser(User.RegisterDto registerDto) {
         service.registerUser(registerDto);
     }
+    
+
 
     @PostMapping("/login")
     public void login(User.AuthDto authDto) {

@@ -10,7 +10,7 @@ $(() => {
         })
             .done(() => {
                 alert("회원가입 완료")
-                location.replace("login")
+                location.replace("index")
             })
             .fail((xhr, status, error) => {
                 alert("회원가입 실패")
