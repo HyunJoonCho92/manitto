@@ -14,8 +14,8 @@
                     dataType: "text"
                 })
                     .done(() => {
-                        alert("로그아웃 되었습니다.dd")
-                        location.reload("/")
+                        alert("로그아웃 되었습니다.")
+                        location.reload()
                     })
             })
         })
